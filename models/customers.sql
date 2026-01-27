@@ -13,9 +13,9 @@ with customers as (
 
     from raw.jaffle_shop.customers
 
-),
+)
 
-orders as (
+,orders as (
 
     select
         id as order_id,
@@ -25,9 +25,9 @@ orders as (
 
     from raw.jaffle_shop.orders
 
-),
+)
 
-customer_orders as (
+,customer_orders as (
 
     select
         customer_id,
@@ -40,10 +40,10 @@ customer_orders as (
 
     group by 1
 
-),
+)
 
 
-final as (
+,final as (
 
     select
         customers.customer_id,
