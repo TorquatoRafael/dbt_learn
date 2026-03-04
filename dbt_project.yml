@@ -34,6 +34,9 @@ clean-targets:         # directories to be removed by `dbt clean`
 
 models:
   jaffle_shop:
+    +persist_docs:
+         relation: true
+         columns: true
     staging:    
       +materialized: view
     intermediate:
@@ -41,6 +44,9 @@ models:
     marts:
       +materialized: table
   stripe:
+    +persist_docs:
+         relation: true
+         columns: true
     staging:    
       +materialized: view
     intermediate:
